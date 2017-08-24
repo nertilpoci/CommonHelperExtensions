@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Text;
+using HelperExtensions.Object;
 using System.Text.RegularExpressions;
 
 namespace HelperExtensions.String
@@ -659,16 +660,27 @@ namespace HelperExtensions.String
             return str.ToString();
         }
 
-
-         private static IDictionary<string, object> AsDictionary(this object source, BindingFlags bindingAttr = BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public)
+        /// <summary>
+        /// Get a list of  digits  from a text
+        /// </summary>
+        public static IEnumerable<int> OnlyDigits(this string value)
         {
-            return source.GetType().GetProperties(bindingAttr).ToDictionary
-            (
-                propInfo => propInfo.Name,
-                propInfo => propInfo.GetValue(source, null)
-            );
-
+            foreach (var character in value)
+            {
+                if(char.IsDigit(character))  yield return character;
+            }
         }
+
+        /// <summary>
+        /// Text to stream
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static Stream ToStream(this string str)
+        {
+            return new MemoryStream(str.GetByteArray());
+        }
+
     }
 }
 
