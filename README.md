@@ -1,6 +1,8 @@
 # HelperExtensions
 .net core extensions to help with repeating tasks on daily basis
 
+## Install-Package Helper.Extensions -Version 1.0.0
+
 Extensions included
 1. Reverse - change the order of the string
 2. IsPalindrome - check if string is the same bacwards and forwards
