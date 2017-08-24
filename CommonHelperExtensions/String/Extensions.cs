@@ -6,10 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Text;
-using HelperExtensions.Object;
+using CommonHelperExtensions.Object;
 using System.Text.RegularExpressions;
 
-namespace HelperExtensions.String
+namespace CommonHelperExtensions.String
 {
     public static class Extensions
     {

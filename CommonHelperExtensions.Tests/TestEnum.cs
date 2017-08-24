@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HelperExtensions.Tests
+namespace CommonHelperExtensions.Tests
 {
     public enum TestEnum
     {

@@ -1,9 +1,9 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-using HelperExtensions.String;
+using CommonHelperExtensions.String;
 
-namespace HelperExtensions.Tests.String
+namespace CommonHelperExtensions.Tests.String
 {
     [TestClass]
     public class StringTests
