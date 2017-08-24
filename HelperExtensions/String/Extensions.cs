@@ -660,7 +660,7 @@ namespace HelperExtensions.String
         }
 
 
-        private static IDictionary<string, object> AsDictionary(this object source, BindingFlags bindingAttr = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance)
+         private static IDictionary<string, object> AsDictionary(this object source, BindingFlags bindingAttr = BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public)
         {
             return source.GetType().GetProperties(bindingAttr).ToDictionary
             (
