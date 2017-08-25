@@ -1,7 +1,7 @@
-# HelperExtensions
+# CommonHelperExtensions
 .net core extensions to help with repeating tasks on daily basis
 
-## Install-Package Helper.Extensions -Version 1.0.0
+## Install-Package CommonHelperExtensions
 
 Extensions included
 1. Reverse - change the order of the string
