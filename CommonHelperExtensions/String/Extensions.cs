@@ -626,7 +626,7 @@ namespace CommonHelperExtensions.String
             {
 
                 var objectProperties = obj.AsDictionary();
-                result = objectProperties.Aggregate(format, (current, o) => current.Replace("{" + o.Key + "}", (o.Value.ToString() ?? string.Empty).ToString()));
+                result = objectProperties.Aggregate(format, (current, o) => current.Replace("{" + o.Key + "}", (o.Value?.ToString() ?? string.Empty).ToString()));
             }
             return result;
         }
